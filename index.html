@@ -32,81 +32,107 @@
             max-width: 100%;
             height: auto;
         }
+        #zoom-controls {
+            margin-bottom: 20px;
+        }
+        button {
+            margin-right: 10px;
+            padding: 5px 10px;
+        }
     </style>
 </head>
 <body>
 
     <h1>唐诗十首</h1>
 
+    <div id="zoom-controls">
+        <button onclick="zoomIn()">放大</button>
+        <button onclick="zoomOut()">缩小</button>
+    </div>
+
     <div class="poem">
         <div class="title">静夜思</div>
         <div class="author">李白</div>
-        <div class="content">床前明月光，\n疑是地上霜。\n举头望明月，\n低头思故乡。</div>
+        <div class="content">床前明月光，<br>疑是地上霜。<br>举头望明月，<br>低头思故乡。</div>
         <img src="e.jpg" alt="Image">
     </div>
 
     <div class="poem">
         <div class="title">登鹳雀楼</div>
         <div class="author">王之涣</div>
-        <div class="content">白日依山尽，\n黄河入海流。\n欲穷千里目，\n更上一层楼。</div>
+        <div class="content">白日依山尽，<br>黄河入海流。<br>欲穷千里目，<br>更上一层楼。</div>
         <img src="e.jpg" alt="Image">
     </div>
 
     <div class="poem">
         <div class="title">春晓</div>
         <div class="author">孟浩然</div>
-        <div class="content">春眠不觉晓，\n处处闻啼鸟。\n夜来风雨声，\n花落知多少。</div>
+        <div class="content">春眠不觉晓，<br>处处闻啼鸟。<br>夜来风雨声，<br>花落知多少。</div>
         <img src="e.jpg" alt="Image">
     </div>
 
     <div class="poem">
         <div class="title">鹿柴</div>
         <div class="author">王维</div>
-        <div class="content">空山不见人，\n但闻人语响。\n返景入深林，\n复照青苔上。</div>
+        <div class="content">空山不见人，<br>但闻人语响。<br>返景入深林，<br>复照青苔上。</div>
         <img src="e.jpg" alt="Image">
     </div>
 
     <div class="poem">
         <div class="title">黄鹤楼送孟浩然之广陵</div>
         <div class="author">李白</div>
-        <div class="content">故人西辞黄鹤楼，\n烟花三月下扬州。\n孤帆远影碧空尽，\n唯见长江天际流。</div>
+        <div class="content">故人西辞黄鹤楼，<br>烟花三月下扬州。<br>孤帆远影碧空尽，<br>唯见长江天际流。</div>
         <img src="e.jpg" alt="Image">
     </div>
 
     <div class="poem">
         <div class="title">送元二使安西</div>
         <div class="author">王维</div>
-        <div class="content">渭城朝雨浥轻尘，\n客舍青青柳色新。\n劝君更尽一杯酒，\n西出阳关无故人。</div>
+        <div class="content">渭城朝雨浥轻尘，<br>客舍青青柳色新。<br>劝君更尽一杯酒，<br>西出阳关无故人。</div>
         <img src="e.jpg" alt="Image">
     </div>
 
     <div class="poem">
         <div class="title">山居秋暝</div>
         <div class="author">王维</div>
-        <div class="content">空山新雨后，\n天气晚来秋。\n明月松间照，\n清泉石上流。</div>
+        <div class="content">空山新雨后，<br>天气晚来秋。<br>明月松间照，<br>清泉石上流。</div>
         <img src="e.jpg" alt="Image">
     </div>
 
     <div class="poem">
         <div class="title">早发白帝城</div>
         <div class="author">李白</div>
-        <div class="content">朝辞白帝彩云间，\n千里江陵一日还。\n两岸猿声啼不住，\n轻舟已过万重山。</div>
+        <div class="content">朝辞白帝彩云间，<br>千里江陵一日还。<br>两岸猿声啼不住，<br>轻舟已过万重山。</div>
         <img src="e.jpg" alt="Image">
     </div>
 
     <div class="poem">
         <div class="title">夜泊牛渚怀古</div>
         <div class="author">李白</div>
-        <div class="content">牛渚西江夜，\n青天无片云。\n登舟望秋月，\n空忆谢将军。</div>
+        <div class="content">牛渚西江夜，<br>青天无片云。<br>登舟望秋月，<br>空忆谢将军。</div>
         <img src="e.jpg" alt="Image">
     </div>
 
     <div class="poem">
         <div class="title">闻官军收河南河北</div>
         <div class="author">杜甫</div>
-        <div class="content">剑外忽传收蓟北，\n初闻涕泪满衣裳。\n却看妻子愁何在，\n漫卷诗书喜欲狂。</div>
+        <div class="content">剑外忽传收蓟北，<br>初闻涕泪满衣裳。<br>却看妻子愁何在，<br>漫卷诗书喜欲狂。</div>
         <img src="e.jpg" alt="Image">
     </div>
+
+    <script>
+        let currentFontSize = 16;
+
+        function zoomIn() {
+            currentFontSize += 2;
+            document.body.style.fontSize = currentFontSize + 'px';
+        }
+
+        function zoomOut() {
+            currentFontSize = Math.max(10, currentFontSize - 2);
+            document.body.style.fontSize = currentFontSize + 'px';
+        }
+    </script>
 
 </body>
 </html>
